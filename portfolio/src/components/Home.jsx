@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-
+import profile from './assets/1147.jpg';
+import avater from './assets/avater.avif';
+import { BsLinkedin } from "react-icons/bs";
 const Home = () => {
   const [skills, setSkills] = useState([]);
 
@@ -19,9 +21,9 @@ const Home = () => {
   return (
     <div className="font-sans bg-gray-50">
      <Helmet>
-        <title>Portfolio | Jigar Sable</title>
-        <meta name="description" content="Welcome to Jigar's Portfolio. Full-Stack Web Developer and Android App Developer" />
-        <meta name="keywords" content="jigar sable, portfolio, jigar, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
+        <title>Portfolio |Sandeep.Kr.Yadav</title>
+        <meta name="description" content="Welcome to Sandeep's Portfolio. Full-Stack Web Developer and Android App Developer" />
+        <meta name="keywords" content="Sandeep Yadav, portfolio, Sandeep, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
         <link rel="icon" href="/favicon.png" type="image/x-png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       </Helmet>
@@ -31,7 +33,7 @@ const Home = () => {
       {/* Navbar */}
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-6 h-16 bg-white shadow-md">
         <a href="/" className="text-2xl font-bold text-gray-800 hover:text-blue-600">
-          <i className="fab fa-node-js mr-2"></i> Jigar
+          <i className="fab fa-node-js mr-2"></i> Sandeep.Kr.Yadav
         </a>
 
         <div id="menu" className="text-3xl cursor-pointer text-indigo-900 md:hidden">
@@ -58,7 +60,7 @@ const Home = () => {
 
           <div className="text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Hi There,<br/> I'm Jigar <span className="text-purple-700">Sable</span>
+              Hi There,<br/> I'm Sandeep <span className="text-purple-700">Kr. Yadav</span>
             </h2>
             <p className="text-xl text-gray-600 mb-8">
               I am into <span className="text-blue-600">Full Stack Development</span>
@@ -70,7 +72,7 @@ const Home = () => {
             
             <div className="mt-8">
               <ul className="flex space-x-4">
-                <li><a href="https://linkedin.com" className="text-blue-600 text-2xl hover:text-blue-800" target="_blank"><i className="fab fa-linkedin"></i></a></li>
+                <li><a href={<BsLinkedin />} className="text-blue-600 text-2xl hover:text-blue-800" target="_blank"><i className="fab fa-linkedin"></i></a></li>
                 <li><a href="https://github.com" className="text-gray-800 text-2xl hover:text-black" target="_blank"><i className="fab fa-github"></i></a></li>
                 <li><a href="https://twitter.com" className="text-blue-400 text-2xl hover:text-blue-600" target="_blank"><i className="fab fa-twitter"></i></a></li>
                 <li><a href="https://telegram.com" className="text-blue-500 text-2xl hover:text-blue-700" target="_blank"><i className="fab fa-telegram-plane"></i></a></li>
@@ -82,7 +84,7 @@ const Home = () => {
         </div>
 
         <div className="hidden md:block">
-          <img src="/hero.png" alt="Hero" className="w-96" />
+          <img src={avater} alt="Hero" className="w-96" />
         </div>
       </section>
 
@@ -94,16 +96,16 @@ const Home = () => {
         
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/3 mb-8 md:mb-0">
-            <img src="/profile2.jpg" alt="Profile" className="rounded-lg w-full max-w-md" />
+            <img src={profile} alt="Profile" className="rounded-lg w-full max-w-md" />
           </div>
           
           <div className="md:w-2/3 md:pl-12">
-            <h3 className="text-3xl font-bold text-gray-800 mb-4">I'm Jigar</h3>
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">I'm Sandeep</h3>
             <span className="inline-block px-4 py-1 bg-blue-100 text-blue-800 rounded-full mb-6">Full Stack Developer</span>
             
             <p className="text-gray-600 mb-6">
               I am a Full-Stack developer based in Pune, India. 
-              I am an Information Technology undergraduate from SPPU.
+              I am an Information Technology undergraduate from AKTU.
               I am very passionate about improving my coding skills & developing applications & websites.
               I build WebApps and Websites using MERN Stack.
               Working for myself to improve my skills.
@@ -112,10 +114,10 @@ const Home = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p><span className="font-semibold">email : </span> jigarsable21@gmail.com</p>
+                <p><span className="font-semibold">email : </span>rkysandeepyadav@gmail.com</p>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p><span className="font-semibold">place : </span> Pune, India - 412206</p>
+                <p><span className="font-semibold">place : </span> Ghaziabad, U.P, India - 201010 </p>
               </div>
             </div>
             
@@ -267,7 +269,7 @@ const Home = () => {
       <footer className="bg-white py-12 px-10">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-gray-800 mb-4">Jigar's Portfolio</h3>
+            <h3 className="text-xl font-bold text-gray-800 mb-4">Sandeep Portfolio</h3>
             <p className="text-gray-600">
               Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀. Connect with me over live chat!
             </p>
@@ -288,13 +290,13 @@ const Home = () => {
           <div>
             <h3 className="text-xl font-bold text-gray-800 mb-4">contact info</h3>
             <p className="text-gray-600 mb-2"><i className="fas fa-phone mr-2 text-blue-600"></i>+91 XXX-XXX-XXXX</p>
-            <p className="text-gray-600 mb-2"><i className="fas fa-envelope mr-2 text-blue-600"></i>jigarsable21@gmail.com</p>
+            <p className="text-gray-600 mb-2"><i className="fas fa-envelope mr-2 text-blue-600"></i>rkysandeepyadav@gmail.com</p>
             <p className="text-gray-600 mb-4"><i className="fas fa-map-marked-alt mr-2 text-blue-600"></i>Pune, India-412206</p>
             
             <div className="flex space-x-4">
               <a href="https://linkedin.com" className="text-blue-600 text-xl hover:text-blue-800"><i className="fab fa-linkedin"></i></a>
               <a href="https://github.com" className="text-gray-800 text-xl hover:text-black"><i className="fab fa-github"></i></a>
-              <a href="mailto:jigarsable21@gmail.com" className="text-gray-600 text-xl hover:text-blue-600"><i className="fas fa-envelope"></i></a>
+              <a href="mailto:rkysandeepyadav@gmail.com" className="text-gray-600 text-xl hover:text-blue-600"><i className="fas fa-envelope"></i></a>
               <a href="https://twitter.com" className="text-blue-400 text-xl hover:text-blue-600"><i className="fab fa-twitter"></i></a>
               <a href="https://telegram.com" className="text-blue-500 text-xl hover:text-blue-700"><i className="fab fa-telegram-plane"></i></a>
             </div>
