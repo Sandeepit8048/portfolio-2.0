@@ -1,37 +1,28 @@
-import  {useState} from 'react';
+import  React from 'react';
 import { Link } from 'react-router-dom';
 
 function Navbar() {
-   const [activeSection, setActiveSection] = useState("About");
-  
-    const navItems = ["About", "Education", "Skills", "Experience", "Contact"];
-  
-    const handleNavClick = (section) => {
-      setActiveSection(section);
-      const element = document.getElementById(section.toLowerCase());
-      element?.scrollIntoView({ behavior: "smooth" });
-    };
+
   return (
     <nav>
-       <header className="bg-white shadow-md sticky top-0 z-10">
-        <nav className="max-w-5xl mx-auto flex justify-between items-center py-4 px-6">
-          <h1 className="text-2xl font-bold text-blue-600">Protfolio</h1>
-          <ul className="flex space-x-4">
-            {navItems.map((item) => (
-              <li key={item}>
-                <button
-                  onClick={() => handleNavClick(item)}
-                  className={`hover:text-blue-600 transition-colors duration-200 ${
-                    activeSection === item ? "text-blue-600 font-semibold" : "text-gray-700"
-                  }`}
-                >
-                  {item}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </header> 
+               {/* <!-- Navbar --> */}
+<header class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex items-center justify-between px-10 h-16">
+  <a href="/" class="text-xl font-bold text-gray-900 flex items-center gap-2">
+    <i class="fab fa-node-js text-2xl text-green-600"></i> Jigar
+  </a>
+  <div id="menu" class="text-2xl text-purple-900 cursor-pointer md:hidden">
+    <i class="fas fa-bars"></i>
+  </div>
+  <nav class="navbar hidden md:flex gap-6">
+    <a href="/#home" class="text-gray-800 font-semibold hover:text-blue-600">Home</a>
+    <a href="/#about" class="text-gray-800 font-semibold hover:text-blue-600">About</a>
+    <a href="/#skills" class="text-gray-800 font-semibold hover:text-blue-600">Skills</a>
+    <a href="/#education" class="text-gray-800 font-semibold hover:text-blue-600">Education</a>
+    <a href="/#work" class="text-gray-800 font-semibold hover:text-blue-600">Work</a>
+    <a href="/#experience" class="text-blue-700 font-semibold border-b-2 border-blue-700">Experience</a>
+    <a href="/#contact" class="text-gray-800 font-semibold hover:text-blue-600">Contact</a>
+  </nav>
+</header>
      
     </nav>
   );
