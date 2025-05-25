@@ -164,8 +164,8 @@ const Home = () => {
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-800 mb-2">Bachelor of Engineering in Information Technology</h3>
-              <p className="text-gray-600 mb-2">Zeal College of engineering and research | SPPU</p>
-              <h4 className="text-blue-600 font-semibold">2020-2024 | Pursuing</h4>
+              <p className="text-gray-600 mb-2">IMS Engineering College, Ghaziabad| AKTU</p>
+              <h4 className="text-blue-600 font-semibold">2021-2025 | Pursuing</h4>
             </div>
           </div>
 
@@ -174,9 +174,9 @@ const Home = () => {
               <img src="/school.jpg" alt="School" className="w-full h-full object-cover" />
             </div>
             <div className="p-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-2">HSC Science | Informatic Practices</h3>
-              <p className="text-gray-600 mb-2">Shri L. G. Haria Multipurpose School | CBSE</p>
-              <h4 className="text-blue-600 font-semibold">2018-2020 | Completed</h4>
+              <h3 className="text-xl font-bold text-gray-800 mb-2"> Science </h3>
+              <p className="text-gray-600 mb-2">Swami Harsewanand Public School | CBSE</p>
+              <h4 className="text-blue-600 font-semibold">2020 | Completed</h4>
             </div>
           </div>
         </div>
