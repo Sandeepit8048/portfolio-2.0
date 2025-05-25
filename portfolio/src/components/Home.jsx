@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import profile from './assets/1147.jpg';
-import avater from './assets/avater.avif';
+// import avater from './assets/avater.avif';
+import About from './About';
 import { BsLinkedin } from "react-icons/bs";
 const Home = () => {
   const [skills, setSkills] = useState([]);
@@ -54,11 +55,11 @@ const Home = () => {
       </header>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-between px-10 pt-20">
-        <div className="relative w-full">
+      {/* <section id="home" className="min-h-screen flex items-center justify-between px-10 pt-20">
+        <div className="relative w-full"> */}
           {/* Particles would go here */}
 
-          <div className="text-left">
+          {/* <div className="text-left">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
               Hi There,<br/> I'm Sandeep <span className="text-purple-700">Kr. Yadav</span>
             </h2>
@@ -86,6 +87,10 @@ const Home = () => {
         <div className="hidden md:block">
           <img src={avater} alt="Hero" className="w-96" />
         </div>
+      </section> */}
+
+      <section>
+        <About />
       </section>
 
       {/* About Section */}
@@ -114,10 +119,10 @@ const Home = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p><span className="font-semibold">email : </span>rkysandeepyadav@gmail.com</p>
+                <p><span className="font-semibold">Email : </span>rkysandeepyadav@gmail.com</p>
               </div>
               <div className="bg-gray-100 p-4 rounded-lg">
-                <p><span className="font-semibold">place : </span> Ghaziabad, U.P, India - 201010 </p>
+                <p><span className="font-semibold">Place : </span> Ghaziabad, U.P, India - 201010 </p>
               </div>
             </div>
             
@@ -266,8 +271,8 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-12 px-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <footer className="bg-white py-12 px-10 border-t border-gray-200  distance-space">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mx-4">
           <div>
             <h3 className="text-xl font-bold text-gray-800 mb-4">Sandeep Portfolio</h3>
             <p className="text-gray-600">
@@ -275,7 +280,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div>
+          {/* <div>
             <h3 className="text-xl font-bold text-gray-800 mb-4">quick links</h3>
             <ul className="space-y-2">
               <li><a href="#home" className="flex items-center text-gray-600 hover:text-blue-600"><i className="fas fa-chevron-circle-right mr-2 text-blue-600"></i> home</a></li>
@@ -285,13 +290,13 @@ const Home = () => {
               <li><a href="#work" className="flex items-center text-gray-600 hover:text-blue-600"><i className="fas fa-chevron-circle-right mr-2 text-blue-600"></i> work</a></li>
               <li><a href="#experience" className="flex items-center text-gray-600 hover:text-blue-600"><i className="fas fa-chevron-circle-right mr-2 text-blue-600"></i> experience</a></li>
             </ul>
-          </div>
+          </div> */}
 
           <div>
             <h3 className="text-xl font-bold text-gray-800 mb-4">contact info</h3>
-            <p className="text-gray-600 mb-2"><i className="fas fa-phone mr-2 text-blue-600"></i>+91 XXX-XXX-XXXX</p>
+            <p className="text-gray-600 mb-2"><i className="fas fa-phone mr-2 text-blue-600"></i>+91 9572720939</p>
             <p className="text-gray-600 mb-2"><i className="fas fa-envelope mr-2 text-blue-600"></i>rkysandeepyadav@gmail.com</p>
-            <p className="text-gray-600 mb-4"><i className="fas fa-map-marked-alt mr-2 text-blue-600"></i>Pune, India-412206</p>
+            <p className="text-gray-600 mb-4"><i className="fas fa-map-marked-alt mr-2 text-blue-600"></i>Ghaziabad, India-201010</p>
             
             <div className="flex space-x-4">
               <a href="https://linkedin.com" className="text-blue-600 text-xl hover:text-blue-800"><i className="fab fa-linkedin"></i></a>
@@ -305,7 +310,7 @@ const Home = () => {
 
         <div className="text-center mt-12">
           <p className="text-gray-600">
-            Designed with <i className="fa fa-heart text-red-500 animate-pulse"></i> by <a href="https://linkedin.com" className="text-blue-600 hover:underline">jigar sable</a>
+            Designed with <i className="fa fa-heart text-red-500 animate-pulse"></i> by <a href="https://linkedin.com" className="text-blue-600 hover:underline">Sandeep Kumar Yadav</a>
           </p>
         </div>
       </footer>

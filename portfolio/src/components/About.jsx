@@ -1,139 +1,95 @@
-import React from 'react'
+import { useCallback } from "react";
+import { Particles } from "@tsparticles/react";
+import { Engine } from "tsparticles-engine"; // Correct import path
+import avater from "./assets/avater.avif"; 
+const HomeSection = () => {
+  const particlesInit = useCallback(async (engine) => {
+    // No need for loadSlim in newer versions
+    await Promise.resolve(engine); // Just to maintain async pattern
+  }, []);
 
-function About() {
   return (
-    <div>
-      <a class="experience" id="experience"/>
+    <section id="home" className="min-h-screen flex items-center justify-between px-10 pt-20 relative overflow-hidden">
+      <Particles
+        id="tsparticles"
+        init={particlesInit}
+        options={{
+          fullScreen: { enable: false },
+          background: { color: { value: "transparent" } },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: { enable: true, mode: "push" },
+              onHover: { enable: true, mode: "repulse" }
+            },
+            modes: {
+              push: { quantity: 4 },
+              repulse: { distance: 100, duration: 0.4 }
+            }
+          },
+          particles: {
+            color: { value: "#6366f1" },
+            links: {
+              color: "#3b82f6",
+              distance: 150,
+              enable: true,
+              opacity: 0.5,
+              width: 1
+            },
+            collisions: { enable: true },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: { default: "bounce" },
+              random: false,
+              speed: 2,
+              straight: false
+            },
+            number: {
+              density: { enable: true, area: 800 },
+              value: 80
+            },
+            opacity: { value: 0.5 },
+            shape: { type: "circle" },
+            size: { value: { min: 1, max: 5 } }
+          },
+          detectRetina: true
+        }}
+        className="absolute inset-0 -z-10"
+      />
 
-  <h2 class="heading"><i class="fas fa-briefcase"></i> Experience</h2>
-  <div class="quote">
-      <span>every experience in your life is being orchestrated to teach you something you need to know to move forward.</span>
-      <ul></ul>
-  </div>
-
-  <div class="timeline">
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Self Employed</h2>
-        </div>
-        <div class="desc">
-            <h3>Full Stack Developer</h3>
-            <p>Oct 2021 - present</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-        <div class="content">
-          <div class="tag">
-            <h2>DevIncept (Top Contributor)</h2>
-          </div>
-          <div class="desc">
-              <h3>DCP 2021 Contributor | Open Source Program</h3>
-              <p>July 2021 - October 2021</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>LetsGrowMore Summer of Code</h2>
-          </div>
-          <div class="desc">
-              <h3>LGM-SOC'21 Participant | Open Source Program</h3>
-              <p>June 2021 - August 2021</p>
-          </div>
-        </div>
-      </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>Mapstreak Flyseas</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Developer | Internship</h3>
-            <p>June 2021 - Dec 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Website Developer | Internship</h3>
-            <p>May 2021 - June 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>The Spark Foundation</h2>
-        </div>
-        <div class="desc">
-            <h3>Mobile Application Developer | Internship</h3>
-            <p>April 2021 - May 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-      <div class="content">
-        <div class="tag">
-          <h2>Frshr Technologies</h2>
-        </div>
-        <div class="desc">
-            <h3>Wordpress Developer | Internship</h3>
-            <p>April 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container right">
-      <div class="content">
-        <div class="tag">
-          <h2>WonderingBlog</h2>
-        </div>
-        <div class="desc">
-            <h3>Web Development & SEO | Internship</h3>
-            <p>March 2021 - April 2021</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container left">
-        <div class="content">
-          <div class="tag">
-            <h2>Hacktoberfest 2020</h2>
-          </div>
-          <div class="desc">
-              <h3>Contributor | Open Source Program</h3>
-              <p>October 2020 - November 2020</p>
+      {/* Rest of your component remains exactly the same */}
+      <div className="relative w-full">
+        <div className="text-left">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+            Hi There,<br/> I'm Sandeep <span className="text-purple-700">Kr. Yadav</span>
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            I am into <span className="text-blue-600">Full Stack Development</span>
+          </p>
+          <a href="#about" className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+            <span>About Me</span>
+            <i className="fas fa-arrow-circle-down ml-2"></i>
+          </a>
+          
+          <div className="mt-8">
+            <ul className="flex space-x-4">
+              <li><a href="#" className="text-blue-600 text-2xl hover:text-blue-800" target="_blank"><i className="fab fa-linkedin"></i></a></li>
+              <li><a href="https://github.com" className="text-gray-800 text-2xl hover:text-black" target="_blank"><i className="fab fa-github"></i></a></li>
+              <li><a href="https://twitter.com" className="text-blue-400 text-2xl hover:text-blue-600" target="_blank"><i className="fab fa-twitter"></i></a></li>
+              <li><a href="https://telegram.com" className="text-blue-500 text-2xl hover:text-blue-700" target="_blank"><i className="fab fa-telegram-plane"></i></a></li>
+              <li><a href="https://instagram.com" className="text-pink-600 text-2xl hover:text-pink-800" target="_blank"><i className="fab fa-instagram"></i></a></li>
+              <li><a href="https://dev.to" className="text-black text-2xl hover:text-gray-800" target="_blank"><i className="fab fa-dev"></i></a></li>
+            </ul>
           </div>
         </div>
       </div>
 
-  </div>
+      <div className="hidden md:block relative z-10">
+        <img src={avater} alt="Hero" className="w-96" />
+      </div>
+    </section>
+  );
+};
 
-  <div class="morebtn">
-    <a href="/#experience" class="btn">
-        <i class="fas fa-arrow-left"></i>
-        <span>Back to Home</span>
-  </a>
-  </div>
-
-
-
-    </div>
-  )
-}
-
-export default About
+export default HomeSection;
